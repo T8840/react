@@ -10,7 +10,7 @@ create policy "student are public." on students for
     select using (true);
 
 create policy "Individuals can create students." on students for
-    insert using (true);
+    insert with check (true);
 
 create policy "Individuals can update their own students." on students for
     update using (true);
